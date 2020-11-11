@@ -146,7 +146,7 @@
             // btn_realizarCita
             // 
             this.btn_realizarCita.Font = new System.Drawing.Font("Sitka Small", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_realizarCita.Location = new System.Drawing.Point(186, 399);
+            this.btn_realizarCita.Location = new System.Drawing.Point(164, 378);
             this.btn_realizarCita.Name = "btn_realizarCita";
             this.btn_realizarCita.Size = new System.Drawing.Size(158, 55);
             this.btn_realizarCita.TabIndex = 11;
