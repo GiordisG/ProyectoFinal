@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ProyectoFinal
@@ -25,7 +18,7 @@ namespace ProyectoFinal
                 FormCliente ventana = new FormCliente(this);
                 ventana.Show();
             }
-            else if(cbx_seccion.SelectedIndex == 1)
+            else if (cbx_seccion.SelectedIndex == 1)
             {
                 this.Hide();
                 FormProfesional ventana = new FormProfesional(this);

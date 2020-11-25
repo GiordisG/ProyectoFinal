@@ -34,7 +34,7 @@
             this.lbl_cedula = new System.Windows.Forms.Label();
             this.lbl_tipoDoc = new System.Windows.Forms.Label();
             this.lbl_cliente = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_realizar = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
@@ -45,11 +45,12 @@
             this.lbl_estadoCita = new System.Windows.Forms.Label();
             this.lbl_titulo = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.lbl_cita = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.btn_modificar = new System.Windows.Forms.Button();
             this.btn_eliminar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.lbl_telefono = new System.Windows.Forms.Label();
+            this.txb_telefono = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -87,7 +88,7 @@
             // 
             this.lbl_cedula.AutoSize = true;
             this.lbl_cedula.Font = new System.Drawing.Font("Sitka Subheading", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_cedula.Location = new System.Drawing.Point(21, 185);
+            this.lbl_cedula.Location = new System.Drawing.Point(13, 205);
             this.lbl_cedula.Name = "lbl_cedula";
             this.lbl_cedula.Size = new System.Drawing.Size(61, 23);
             this.lbl_cedula.TabIndex = 3;
@@ -97,7 +98,7 @@
             // 
             this.lbl_tipoDoc.AutoSize = true;
             this.lbl_tipoDoc.Font = new System.Drawing.Font("Sitka Subheading", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_tipoDoc.Location = new System.Drawing.Point(256, 185);
+            this.lbl_tipoDoc.Location = new System.Drawing.Point(256, 204);
             this.lbl_tipoDoc.Name = "lbl_tipoDoc";
             this.lbl_tipoDoc.Size = new System.Drawing.Size(150, 23);
             this.lbl_tipoDoc.TabIndex = 4;
@@ -107,30 +108,28 @@
             // 
             this.lbl_cliente.AutoSize = true;
             this.lbl_cliente.Font = new System.Drawing.Font("Sitka Subheading", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_cliente.Location = new System.Drawing.Point(12, 73);
+            this.lbl_cliente.Location = new System.Drawing.Point(48, 74);
             this.lbl_cliente.Name = "lbl_cliente";
             this.lbl_cliente.Size = new System.Drawing.Size(244, 30);
             this.lbl_cliente.TabIndex = 6;
             this.lbl_cliente.Text = "informacion del cliente";
             // 
-            // button1
+            // btn_realizar
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(386, 332);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(107, 53);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Realizar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btn_realizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_realizar.Location = new System.Drawing.Point(668, 327);
+            this.btn_realizar.Name = "btn_realizar";
+            this.btn_realizar.Size = new System.Drawing.Size(107, 53);
+            this.btn_realizar.TabIndex = 7;
+            this.btn_realizar.Text = "Realizar";
+            this.btn_realizar.UseVisualStyleBackColor = true;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(412, 189);
+            this.textBox2.Location = new System.Drawing.Point(412, 205);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(92, 20);
             this.textBox2.TabIndex = 9;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // textBox3
             // 
@@ -148,14 +147,14 @@
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(88, 189);
+            this.textBox5.Location = new System.Drawing.Point(88, 208);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(146, 20);
             this.textBox5.TabIndex = 12;
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(180, 349);
+            this.dateTimePicker1.Location = new System.Drawing.Point(172, 358);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker1.TabIndex = 13;
@@ -164,7 +163,7 @@
             // 
             this.lbl_encuestro.AutoSize = true;
             this.lbl_encuestro.Font = new System.Drawing.Font("Sitka Subheading", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_encuestro.Location = new System.Drawing.Point(21, 346);
+            this.lbl_encuestro.Location = new System.Drawing.Point(13, 358);
             this.lbl_encuestro.Name = "lbl_encuestro";
             this.lbl_encuestro.Size = new System.Drawing.Size(153, 23);
             this.lbl_encuestro.TabIndex = 14;
@@ -174,29 +173,27 @@
             // 
             this.lbl_profesional.AutoSize = true;
             this.lbl_profesional.Font = new System.Drawing.Font("Sitka Subheading", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_profesional.Location = new System.Drawing.Point(123, 240);
+            this.lbl_profesional.Location = new System.Drawing.Point(103, 291);
             this.lbl_profesional.Name = "lbl_profesional";
             this.lbl_profesional.Size = new System.Drawing.Size(96, 23);
             this.lbl_profesional.TabIndex = 15;
             this.lbl_profesional.Text = "Profesional";
-            this.lbl_profesional.Click += new System.EventHandler(this.lbl_profesional_Click);
             // 
             // lbl_estadoCita
             // 
             this.lbl_estadoCita.AutoSize = true;
-            this.lbl_estadoCita.Font = new System.Drawing.Font("Sitka Subheading", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_estadoCita.Location = new System.Drawing.Point(408, 246);
+            this.lbl_estadoCita.Font = new System.Drawing.Font("Sitka Subheading", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_estadoCita.Location = new System.Drawing.Point(449, 314);
             this.lbl_estadoCita.Name = "lbl_estadoCita";
-            this.lbl_estadoCita.Size = new System.Drawing.Size(107, 19);
+            this.lbl_estadoCita.Size = new System.Drawing.Size(156, 28);
             this.lbl_estadoCita.TabIndex = 16;
             this.lbl_estadoCita.Text = "Estado de la cita";
-            this.lbl_estadoCita.Click += new System.EventHandler(this.lbl_estadoCita_Click);
             // 
             // lbl_titulo
             // 
             this.lbl_titulo.AutoSize = true;
             this.lbl_titulo.Font = new System.Drawing.Font("Magneto", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_titulo.Location = new System.Drawing.Point(175, 17);
+            this.lbl_titulo.Location = new System.Drawing.Point(327, 12);
             this.lbl_titulo.Name = "lbl_titulo";
             this.lbl_titulo.Size = new System.Drawing.Size(239, 28);
             this.lbl_titulo.TabIndex = 18;
@@ -208,23 +205,14 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(17, 402);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(557, 200);
+            this.dataGridView1.Size = new System.Drawing.Size(839, 261);
             this.dataGridView1.TabIndex = 19;
-            // 
-            // lbl_cita
-            // 
-            this.lbl_cita.AutoSize = true;
-            this.lbl_cita.Font = new System.Drawing.Font("Sitka Subheading", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_cita.Location = new System.Drawing.Point(20, 296);
-            this.lbl_cita.Name = "lbl_cita";
-            this.lbl_cita.Size = new System.Drawing.Size(52, 30);
-            this.lbl_cita.TabIndex = 20;
-            this.lbl_cita.Text = "Cita";
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(225, 244);
+            this.comboBox1.Location = new System.Drawing.Point(205, 291);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 21;
@@ -232,7 +220,7 @@
             // btn_modificar
             // 
             this.btn_modificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_modificar.Location = new System.Drawing.Point(499, 320);
+            this.btn_modificar.Location = new System.Drawing.Point(781, 314);
             this.btn_modificar.Name = "btn_modificar";
             this.btn_modificar.Size = new System.Drawing.Size(75, 35);
             this.btn_modificar.TabIndex = 22;
@@ -242,7 +230,7 @@
             // btn_eliminar
             // 
             this.btn_eliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_eliminar.Location = new System.Drawing.Point(499, 361);
+            this.btn_eliminar.Location = new System.Drawing.Point(781, 361);
             this.btn_eliminar.Name = "btn_eliminar";
             this.btn_eliminar.Size = new System.Drawing.Size(75, 35);
             this.btn_eliminar.TabIndex = 23;
@@ -252,22 +240,41 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(442, 273);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(500, 360);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(40, 13);
+            this.label1.Size = new System.Drawing.Size(55, 18);
             this.label1.TabIndex = 24;
             this.label1.Text = "Estado";
+            // 
+            // lbl_telefono
+            // 
+            this.lbl_telefono.AutoSize = true;
+            this.lbl_telefono.Font = new System.Drawing.Font("Sitka Subheading", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_telefono.Location = new System.Drawing.Point(499, 124);
+            this.lbl_telefono.Name = "lbl_telefono";
+            this.lbl_telefono.Size = new System.Drawing.Size(74, 23);
+            this.lbl_telefono.TabIndex = 25;
+            this.lbl_telefono.Text = "Telefono";
+            // 
+            // txb_telefono
+            // 
+            this.txb_telefono.Location = new System.Drawing.Point(579, 127);
+            this.txb_telefono.Name = "txb_telefono";
+            this.txb_telefono.Size = new System.Drawing.Size(120, 20);
+            this.txb_telefono.TabIndex = 26;
             // 
             // FormCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(592, 616);
+            this.ClientSize = new System.Drawing.Size(868, 675);
+            this.Controls.Add(this.txb_telefono);
+            this.Controls.Add(this.lbl_telefono);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_eliminar);
             this.Controls.Add(this.btn_modificar);
             this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.lbl_cita);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.lbl_titulo);
             this.Controls.Add(this.lbl_estadoCita);
@@ -278,7 +285,7 @@
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_realizar);
             this.Controls.Add(this.lbl_cliente);
             this.Controls.Add(this.lbl_tipoDoc);
             this.Controls.Add(this.lbl_cedula);
@@ -301,7 +308,7 @@
         private System.Windows.Forms.Label lbl_cedula;
         private System.Windows.Forms.Label lbl_tipoDoc;
         private System.Windows.Forms.Label lbl_cliente;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_realizar;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox4;
@@ -312,10 +319,11 @@
         private System.Windows.Forms.Label lbl_estadoCita;
         private System.Windows.Forms.Label lbl_titulo;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Label lbl_cita;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button btn_modificar;
         private System.Windows.Forms.Button btn_eliminar;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbl_telefono;
+        private System.Windows.Forms.TextBox txb_telefono;
     }
 }
