@@ -23,7 +23,6 @@ namespace ProyectoFinal
         private void btn_volver_Click(object sender, EventArgs e)
         {
             this.Hide();
-            
             c.Show();
 
         }
@@ -31,6 +30,26 @@ namespace ProyectoFinal
         private void FormCliente_FormClosed(object sender, FormClosedEventArgs e)
         {
             c.Show();
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl_profesional_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl_estadoCita_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

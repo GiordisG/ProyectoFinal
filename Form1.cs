@@ -28,7 +28,7 @@ namespace ProyectoFinal
             else if(cbx_seccion.SelectedIndex == 1)
             {
                 this.Hide();
-                FormProfesional ventana = new FormProfesional();
+                FormProfesional ventana = new FormProfesional(this);
                 ventana.Show();
             }
         }
