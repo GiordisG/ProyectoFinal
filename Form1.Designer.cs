@@ -48,6 +48,7 @@
             // 
             this.cbx_seccion.FormattingEnabled = true;
             this.cbx_seccion.Items.AddRange(new object[] {
+            "CITA",
             "CLIENTE",
             "PROFESIONAL"});
             this.cbx_seccion.Location = new System.Drawing.Point(174, 163);
