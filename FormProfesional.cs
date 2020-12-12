@@ -33,7 +33,7 @@ namespace ProyectoFinal
             string query2 = "INSERT INTO DISPONIBILIDAD (Dias) VALUES (@dias)";
             conexion.Open();
             SqlCommand c2 = new SqlCommand(query2, conexion);
-            c2.Parameters.AddWithValue("@dias", listbox_disponibilidad.SelectedItem);
+            c2.Parameters.AddWithValue("@dias", listbox_disponibilidad.SelectedItems);
             c2.ExecuteNonQuery();
 
             string query = "INSERT INTO PROFESIONAL (Nombre, Apellido, Telefono, Num_doc, Profesion) VALUES (@nombre, @apellido, @telefono, @num_doc, @profesion)";
