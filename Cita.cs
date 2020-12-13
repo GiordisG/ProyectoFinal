@@ -25,42 +25,51 @@ namespace ProyectoFinal
         {
             string estado_activo = "ACTIVO";
             lbl_estadoCita.Text = $"{estado_activo}";
-
+            SqlConnection conexion = new SqlConnection("server=localhost\\SQLEXPRESS ; database=PROYECTOFC# ; integrated security = true");
             SqlCommand comando = new SqlCommand("Select * from VISITANTE", conexion);
             SqlDataAdapter adaptador = new SqlDataAdapter();
             adaptador.SelectCommand = comando;
             DataTable tabla = new DataTable();
             adaptador.Fill(tabla);
             cmb_cliente.DataSource = tabla;
+
             for(int i = 0; i < 1; i++) {
-                if (cmb_cliente.Text == (cmb_cliente.DataSource = "NOMBRE"))
-                    SqlConnection conexion = new SqlConnection("server=localhost\\SQLEXPRESS ; database=PROYECTOFC# ; integrated security = true");
-                    string query = "INSERT INTO CITA (Id_visitante) VALUES (@id_visitante)";
-                    conexion.Open();
-                    SqlCommand c = new SqlCommand(query, conexion);
-                    c.Parameters.AddWithValue("@id_visitante", i);
+                if (cmb_cliente.Text != (cmb_cliente.DisplayMember = "NOMBRE"))
+                {
+                    SqlConnection conexion2 = new SqlConnection("server=localhost\\SQLEXPRESS ; database=PROYECTOFC# ; integrated security = true");
+                    string query2 = "INSERT INTO CITA (Id_visitante) VALUES (@id_visitante)";
+                    conexion2.Open();
+                    SqlCommand c2 = new SqlCommand(query2, conexion2);
+                    c2.Parameters.AddWithValue("@id_visitante", i);
+                    
+                }
+                    
             }
-            SqlCommand comando = new SqlCommand("Select * from PROFESIONAL", conexion);
-            SqlDataAdapter adaptador = new SqlDataAdapter();
-            adaptador.SelectCommand = comando;
-            DataTable tabla = new DataTable();
-            adaptador.Fill(tabla);
+            SqlCommand comando2 = new SqlCommand("Select * from PROFESIONAL", conexion);
+            SqlDataAdapter adaptador2 = new SqlDataAdapter();
+            adaptador2.SelectCommand = comando2;
+            DataTable tabla2 = new DataTable();
+            adaptador2.Fill(tabla2);
             cmb_cliente.DataSource = tabla;
             for(int k = 0; k < 1; k++) {
-                if (cmb_cliente.Text == (cmb_cliente.DataSource = "NOMBRE"))
-                    SqlConnection conexion = new SqlConnection("server=localhost\\SQLEXPRESS ; database=PROYECTOFC# ; integrated security = true");
-                    string query = "INSERT INTO CITA (Id_profesional) VALUES (@id_profesional)";
+                if (cmb_cliente.Text == (cmb_cliente.DisplayMember = "NOMBRE"))
+                {
+                    SqlConnection conexion3 = new SqlConnection("server=localhost\\SQLEXPRESS ; database=PROYECTOFC# ; integrated security = true");
+                    string query3 = "INSERT INTO CITA (Id_profesional) VALUES (@id_profesional)";
                     conexion.Open();
-                    SqlCommand c = new SqlCommand(query, conexion);
-                    c.Parameters.AddWithValue("@id_profesional", k);
+                    SqlCommand c3 = new SqlCommand(query3, conexion3);
+                    c3.Parameters.AddWithValue("@id_profesional", k);
+                    c3.ExecuteNonQuery();
+                }
+                    
             }
-            SqlConnection conexion = new SqlConnection("server=localhost\\SQLEXPRESS ; database=PROYECTOFC# ; integrated security = true");
-            string query = "INSERT INTO CITA (Estado_cita, Fecha_reservado) VALUES (@estado_cita, @fecha_reservado)";
-            conexion.Open();
-            SqlCommand c = new SqlCommand(query, conexion);
-            c.Parameters.AddWithValue("@estado_cita", lbl_estadoCita.Text);
-            c.Parameters.AddWithValue("@fecha_reservado", dp_cita.Text);
-            c.ExecuteNonQuery();
+            SqlConnection conexion4 = new SqlConnection("server=localhost\\SQLEXPRESS ; database=PROYECTOFC# ; integrated security = true");
+            string query4 = "INSERT INTO CITA (Estado_cita, Fecha_reservado) VALUES (@estado_cita, @fecha_reservado)";
+            conexion4.Open();
+            SqlCommand c4 = new SqlCommand(query4, conexion4);
+            c4.Parameters.AddWithValue("@estado_cita", lbl_estadoCita.Text);
+            c4.Parameters.AddWithValue("@fecha_reservado", dp_cita.Text);
+            c4.ExecuteNonQuery();
             MessageBox.Show("Valores Insertados");
         }
 
